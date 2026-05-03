@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Grano Dorado · Café de Especialidad</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts: combinación moderna y legible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========== HEADER / NAVEGACIÓN ========== -->
+<header class="header" id="header">
+    <div class="nav-container">
+        <a href="#inicio" class="logo" aria-label="Grano Dorado Inicio">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span class="logo-texto">Grano Dorado</span>
+            <span class="logo-sub">Café de Especialidad</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#inicio" class="nav-item">Inicio</a>
+            <a href="#productos" class="nav-item">Catálogo</a>
+            <a href="#nosotros" class="nav-item">Nosotros</a>
+            <a href="#resenas" class="nav-item">Reseñas</a>
+            <a href="#blog" class="nav-item">Blog</a>
+            <a href="#contacto" class="nav-item">Contacto</a>
+        </nav>
+        <div class="nav-acciones">
+            <button class="btn-icon carrito-btn" id="btnCarrito" aria-label="Ver carrito">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="carrito-badge" id="carritoBadge">0</span>
+            </button>
+            <button class="btn-menu-movil" id="btnMenuMovil" aria-label="Menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-contenido">
+        <span class="hero-etiqueta">Guatemala · Origen Único</span>
+        <h1 class="hero-titulo">El arte del café<br>de especialidad</h1>
+        <p class="hero-descripcion">
+            Granos seleccionados de fincas en Antigua y Huehuetenango. Tueste artesanal, trazabilidad total y un sabor que transforma cada taza en una experiencia inolvidable.
+        </p>
+        <div class="hero-botones">
+            <a href="#productos" class="btn btn-primario">Explorar catálogo <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#nosotros" class="btn btn-secundario">Nuestra historia</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Desliza</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ========== PRODUCTOS DESTACADOS ========== -->
+<section class="seccion-productos" id="productos">
+    <div class="contenedor">
+        <div class="seccion-encabezado">
+            <span class="seccion-etiqueta">Catálogo</span>
+            <h2 class="seccion-titulo">Nuestros productos estrella</h2>
+            <p class="seccion-descripcion">Cada taza cuenta una historia. Elegí tu favorito y dejate llevar por los sabores de nuestra tierra.</p>
+        </div>
+        <div class="productos-grid" id="productosGrid">
+            <!-- Se llena dinámicamente con JS -->
+        </div>
+    </div>
+</section>
+
+<!-- ========== NOSOTROS / VALORES ========== -->
+<section class="seccion-nosotros" id="nosotros">
+    <div class="contenedor nosotros-grid">
+        <div class="nosotros-imagen">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&fit=crop&q=80"
+                 alt="Finca de café en Guatemala"
+                 loading="lazy">
+        </div>
+        <div class="nosotros-texto">
+            <span class="seccion-etiqueta">Sobre nosotros</span>
+            <h2 class="seccion-titulo">De la finca a tu taza, sin intermediarios</h2>
+            <p>
+                En <strong>Grano Dorado, S.A.</strong> trabajamos directamente con productores locales de Antigua y Huehuetenango. Cada lote es cuidadosamente seleccionado, tostado en pequeños lotes y empacado en materiales compostables. Creemos en un café que respeta la tierra, a quienes lo cultivan y a quienes lo disfrutan.
+            </p>
+            <div class="valores-lista">
+                <div class="valor-item">
+                    <i class="fa-solid fa-seedling"></i>
+                    <div>
+                        <strong>Sostenibilidad</strong>
+                        <span>Empaques 100 % compostables</span>
+                    </div>
+                </div>
+                <div class="valor-item">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div>
+                        <strong>Comercio justo</strong>
+                        <span>Pago directo a productores</span>
+                    </div>
+                </div>
+                <div class="valor-item">
+                    <i class="fa-solid fa-medal"></i>
+                    <div>
+                        <strong>Calidad SCA > 80</strong>
+                        <span>Granos de especialidad certificados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RESEÑAS ========== -->
+<section class="seccion-resenas" id="resenas">
+    <div class="contenedor">
+        <div class="seccion-encabezado">
+            <span class="seccion-etiqueta">Testimonios</span>
+            <h2 class="seccion-titulo">Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="resenas-grid">
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p>"El mejor latte que he probado. El grano de origen marca una diferencia enorme. Ambiente increíble y atención cálida."</p>
+                <div class="resena-autor">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&fit=crop&q=80" alt="Ana R." loading="lazy">
+                    <span>Ana R.</span>
+                </div>
+            </div>
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p>"Compro el café molido cada semana. Calidad consistente, servicio excelente. Mi suscripción mensual vale cada centavo."</p>
+                <div class="resena-autor">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&fit=crop&q=80" alt="Luis M." loading="lazy">
+                    <span>Luis M.</span>
+                </div>
+            </div>
+            <div class="resena-card">
+                <div class="resena-estrellas">★★★★★</div>
+                <p>"Los snacks artesanales y el capuccino son adictivos. Su programa de fidelización me encanta. ¡Recomendadísimo!"</p>
+                <div class="resena-autor">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&fit=crop&q=80" alt="Karla G." loading="lazy">
+                    <span>Karla G.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BLOG / TIPS ========== -->
+<section class="seccion-blog" id="blog">
+    <div class="contenedor">
+        <div class="seccion-encabezado">
+            <span class="seccion-etiqueta">Blog & Cultura</span>
+            <h2 class="seccion-titulo">Tips, recetas y más</h2>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&fit=crop&q=80');"></div>
+                <div class="blog-contenido">
+                    <span class="blog-fecha">12 mayo 2026</span>
+                    <h3>Cómo preparar el V60 perfecto</h3>
+                    <p>Dominá la extracción manual y resaltá las notas de chocolate y caramelo de nuestros granos.</p>
+                    <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500&fit=crop&q=80');"></div>
+                <div class="blog-contenido">
+                    <span class="blog-fecha">5 mayo 2026</span>
+                    <h3>Tipos de tueste: una guía</h3>
+                    <p>Descubrí el perfil ideal para tu paladar: claro, medio u oscuro. Cada uno tiene su magia.</p>
+                    <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&fit=crop&q=80');"></div>
+                <div class="blog-contenido">
+                    <span class="blog-fecha">28 abril 2026</span>
+                    <h3>Beneficios del café de especialidad</h3>
+                    <p>Antioxidantes, energía natural y un sabor que cuida tu salud. Conocé por qué elegir calidad.</p>
+                    <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section class="seccion-contacto" id="contacto">
+    <div class="contenedor contacto-grid">
+        <div class="contacto-info">
+            <span class="seccion-etiqueta">Contacto</span>
+            <h2 class="seccion-titulo">Hablemos de café</h2>
+            <p>¿Tenés preguntas, querés un pedido especial o simplemente saludar? Estamos acá para vos.</p>
+            <ul class="contacto-lista">
+                <li><i class="fa-solid fa-phone"></i> +502 2233 4455</li>
+                <li><i class="fa-solid fa-envelope"></i> hola@granodorado.com</li>
+                <li><i class="fa-brands fa-whatsapp"></i> +502 5123 4567</li>
+                <li><i class="fa-solid fa-location-dot"></i> 12 Calle 4-32, Zona 10, Cdad. de Guatemala</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <form class="contacto-form" id="formContacto">
+            <div class="input-grupo">
+                <input type="text" id="contactoNombre" required placeholder=" ">
+                <label for="contactoNombre">Nombre completo</label>
+            </div>
+            <div class="input-grupo">
+                <input type="email" id="contactoEmail" required placeholder=" ">
+                <label for="contactoEmail">Correo electrónico</label>
+            </div>
+            <div class="input-grupo">
+                <textarea id="contactoMensaje" rows="3" required placeholder=" "></textarea>
+                <label for="contactoMensaje">Tu mensaje</label>
+            </div>
+            <button type="submit" class="btn btn-primario btn-enviar">Enviar mensaje <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="contenedor footer-grid">
+        <div class="footer-logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Grano Dorado, S.A.</span>
+            <p>Café de especialidad guatemalteco desde 2025.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Enlaces</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="footer-links">
+            <h4>Ayuda</h4>
+            <a href="#">Envíos</a>
+            <a href="#">Devoluciones</a>
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Suscribite</h4>
+            <p>Recibí ofertas y novedades en tu correo.</p>
+            <form id="formNewsletter" class="newsletter-form">
+                <input type="email" placeholder="tu@email.com" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Grano Dorado, S.A. · Empaques compostables · Amor por el origen.</p>
+    </div>
+</footer>
+
+<!-- ========== MODAL: CARRITO ========== -->
+<div class="modal-overlay" id="modalCarrito">
+    <div class="modal-contenido modal-carrito">
+        <div class="modal-header">
+            <h3>Tu pedido <i class="fa-solid fa-bag-shopping"></i></h3>
+            <button class="btn-cerrar-modal" id="btnCerrarCarrito"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body" id="carritoItems">
+            <p class="carrito-vacio">El carrito está vacío.</p>
+        </div>
+        <div class="modal-footer">
+            <div class="carrito-total" id="carritoTotal">Total: Q0.00</div>
+            <button class="btn btn-primario btn-checkout" id="btnIrCheckout" disabled>Continuar con la compra</button>
+        </div>
+    </div>
+</div>
+
+<!-- ========== MODAL: CHECKOUT (FORMULARIO DE COMPRA) ========== -->
+<div class="modal-overlay" id="modalCheckout">
+    <div class="modal-contenido modal-checkout">
+        <div class="modal-header">
+            <h3>Finalizar compra <i class="fa-solid fa-credit-card"></i></h3>
+            <button class="btn-cerrar-modal" id="btnCerrarCheckout"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+            <form id="formCheckout" novalidate>
+                <p class="checkout-intro">Completá tus datos para confirmar el pedido. <strong>Demo: todos los datos son aceptados.</strong></p>
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="input-grupo">
+                        <input type="text" id="checkNombre" required placeholder=" ">
+                        <label for="checkNombre">Nombre completo *</label>
+                    </div>
+                    <div class="input-grupo">
+                        <input type="email" id="checkEmail" required placeholder=" ">
+                        <label for="checkEmail">Correo electrónico *</label>
+                    </div>
+                    <div class="input-grupo">
+                        <input type="tel" id="checkTelefono" required placeholder=" ">
+                        <label for="checkTelefono">Teléfono *</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dirección de envío</legend>
+                    <div class="input-grupo">
+                        <input type="text" id="checkDireccion" required placeholder=" ">
+                        <label for="checkDireccion">Dirección *</label>
+                    </div>
+                    <div class="input-fila">
+                        <div class="input-grupo">
+                            <input type="text" id="checkCiudad" required placeholder=" ">
+                            <label for="checkCiudad">Ciudad *</label>
+                        </div>
+                        <div class="input-grupo">
+                            <input type="text" id="checkCodigoPostal" required placeholder=" ">
+                            <label for="checkCodigoPostal">Código postal *</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Método de pago (demo)</legend>
+                    <div class="metodo-pago">
+                        <label class="radio-pago">
+                            <input type="radio" name="metodoPago" value="tarjeta" checked>
+                            <span class="radio-indicador"></span>
+                            <i class="fa-regular fa-credit-card"></i> Tarjeta de crédito/débito
+                        </label>
+                        <label class="radio-pago">
+                            <input type="radio" name="metodoPago" value="transferencia">
+                            <span class="radio-indicador"></span>
+                            <i class="fa-solid fa-building-columns"></i> Transferencia bancaria
+                        </label>
+                    </div>
+                    <div class="input-grupo" id="grupoTarjeta">
+                        <input type="text" id="checkTarjeta" placeholder=" " maxlength="19">
+                        <label for="checkTarjeta">Número de tarjeta (simulado)</label>
+                    </div>
+                </fieldset>
+
+                <div class="checkout-resumen" id="checkoutResumen"></div>
+
+                <button type="submit" class="btn btn-primario btn-confirmar">
+                    Confirmar pedido <i class="fa-solid fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ========== TOAST / NOTIFICACIONES ========== -->
+<div class="toast-contenedor" id="toastContenedor"></div>
+
+<!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+<a href="https://wa.me/50251234567" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JavaScript externo -->
+<script src="script.js"></script>
+</body>
+</html>
