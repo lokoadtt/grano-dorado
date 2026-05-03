@@ -3,6 +3,11 @@
    Paleta: tonos tierra, crema, dorado suave, tipografía elegante
    ============================================================ */
 
+.logo-img {
+    height: 40px;  /* ajustá según tu logo */
+    width: auto;
+}
+
 :root {
     --color-fondo: #fdfaf6;
     --color-blanco: #ffffff;
