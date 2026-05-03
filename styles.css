@@ -1224,7 +1224,63 @@ legend {
     transform: scale(1.1);
     box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
 }
+/* ---------- MISIÓN Y VISIÓN ---------- */
+.mision-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
 
+.mision-vision-card {
+    background: var(--color-fondo);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem 1.8rem;
+    border: 1px solid var(--color-gris-borde);
+    transition: var(--transicion);
+    text-align: center;
+}
+
+.mision-vision-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-elevada);
+    border-color: var(--color-dorado);
+    background: var(--color-blanco);
+}
+
+.mv-icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-dorado-claro);
+    color: var(--color-dorado-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.8rem;
+    font-size: 1.3rem;
+}
+
+.mision-vision-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+}
+
+.mision-vision-card p {
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+}
+
+/* Responsive: en móvil se apilan */
+@media (max-width: 600px) {
+    .mision-vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
     .nav-links {
